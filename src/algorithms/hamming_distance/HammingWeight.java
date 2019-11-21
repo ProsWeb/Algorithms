@@ -5,7 +5,7 @@
 //        Output: 3
 //        Explanation: The input binary string 00000000000000000000000000001011 has a total of three '1' bits.
 
-package algorithms.hamming.distance;
+package algorithms.hamming_distance;
 
 public class HammingWeight {
     public int hammingWeight(final int n) {

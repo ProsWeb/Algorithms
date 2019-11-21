@@ -24,7 +24,7 @@
 //        Sample Output 2:
 //
 //        5 1
-package algorithms.hamming.distance;
+package algorithms.hamming_distance;
 
 import java.util.*;
 

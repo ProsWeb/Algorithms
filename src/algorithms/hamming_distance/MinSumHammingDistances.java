@@ -33,7 +33,7 @@
 //
 //        aaabbb
 
-package algorithms.hamming.distance;
+package algorithms.hamming_distance;
 
 import java.util.*;
 
