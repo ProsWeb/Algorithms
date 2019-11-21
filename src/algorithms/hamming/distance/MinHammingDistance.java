@@ -1,3 +1,4 @@
+
 //Given two strings, a pattern and a text. Write a program that finds a substring
 // which has the minimum Hamming distance with the pattern.
 //
@@ -23,6 +24,7 @@
 //        Sample Output 2:
 //
 //        5 1
+package algorithms.hamming.distance;
 
 import java.util.*;
 
@@ -38,14 +40,16 @@ public class MinHammingDistance {
         res.forEach(x -> System.out.print(x + " "));
 
     }
-    private static List<String> textList(String text, int patternLength) {
+    private static List<String> textList(final String text,
+                                         final int patternLength) {
         List<String> list = new ArrayList<>();
         for (int i = 0; i <= text.length() - patternLength; i++) {
             list.add(text.substring(i, patternLength + i));
         }
         return list;
     }
-    private static Map<String, Integer> hammingDistance(List<String> list, String pattern) {
+    private static Map<String, Integer> hammingDistance(final List<String> list,
+                                                        final String pattern) {
         Map<String, Integer> map = new LinkedHashMap<>();
         for (String s : list) {
             int distance = 0;
@@ -58,7 +62,8 @@ public class MinHammingDistance {
         }
         return map;
     }
-    private static List<Integer> result(Map<String, Integer> dst, String text) {
+    private static List<Integer> result(final Map<String, Integer> dst,
+                                        final String text) {
         List<Integer> result = new ArrayList<>(2);
         Map.Entry<String, Integer> min = null;
 

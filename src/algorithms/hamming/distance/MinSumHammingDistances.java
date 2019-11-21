@@ -33,9 +33,11 @@
 //
 //        aaabbb
 
+package algorithms.hamming.distance;
+
 import java.util.*;
 
-public class minSumHammingDistances {
+public class MinSumHammingDistances {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
@@ -55,7 +57,7 @@ public class minSumHammingDistances {
                 Comparator.comparing(Map.Entry::getValue));
         System.out.println(min.getKey());
     }
-    public static Map<String, Integer> minimumHammingSum(List<String> allStrings) {
+    private static Map<String, Integer> minimumHammingSum(final List<String> allStrings) {
         Map<String, Integer> map = new LinkedHashMap<>();
         for (int i = 0; i < allStrings.size(); i++) {
             String currentString = allStrings.get(i);
@@ -65,7 +67,8 @@ public class minSumHammingDistances {
         }
         return map;
     }
-    private static List<String> rest(List<String> allStrings, int stringIndexToRemove) {
+    private static List<String> rest(final List<String> allStrings,
+                                     final int stringIndexToRemove) {
         List<String> restStrings = new ArrayList<>();
         for (int i = 0; i < allStrings.size(); i++) {
             if (i != stringIndexToRemove) {
@@ -75,7 +78,8 @@ public class minSumHammingDistances {
         return restStrings;
     }
 
-    private static int hammingDistance(List<String> restStrings, String pattern) {
+    private static int hammingDistance(final List<String> restStrings,
+                                       final String pattern) {
         int distance = 0;
         for (String s : restStrings) {
             for (int i = 0; i < s.length(); i++) {

@@ -19,8 +19,10 @@
 //               ↑
 //        The above arrows point to positions where the corresponding bits are different.
 
+package algorithms.hamming.distance;
+
 public class HammingDistanceInteger {
-    public int hammingDistance(int x, int y) {
+    public int hammingDistance(final int x, final int y) {
         return Integer.bitCount(x ^ y);
     }
 
